@@ -3,7 +3,7 @@
 # Inhoudsopgave
 1.  [Inleiding](#inleiding)
 2.  [Functional Layer](#functional-layer)
-3.  [Usable Layer]
+3.  [Usable Layer](#usable-layer)
 4.  [Enhanced Layer]
 5.  [Flow Schema]
 
@@ -20,3 +20,7 @@ Ik kreeg de keuze tussen 6 user stories. Ik heb voor de eerste user story gekoze
 ## Functional Layer <a name="functional-layer"></a>
 
 <img src="/img-readme/functional-layer.jpg" width=600px>
+
+In de functional layer wilde ik me compleet focussen op de core functionaliteit van de user story. Iedereen moet de enquete in kunnen vullen, ongeacht van browser. Daarom moest het formulier werken zonder styling of JavaScript. Dit kan met HTML elementen zoals text-inputs, radio buttons, fieldsets en submit buttons. Browsers zoals Lynx kunnen alleen HTML lezen, dus ik wilde de enquete ook toegankelijk maken voor mensen die deze browser gebruiken (ik kom hier later in de readm.me op terug).
+
+## Usable Layer <a name="usable-layer"></a>
