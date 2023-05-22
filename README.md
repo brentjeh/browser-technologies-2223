@@ -4,7 +4,7 @@
 1.  [Inleiding](#inleiding)
 2.  [Functional Layer](#functional-layer)
 3.  [Usable Layer](#usable-layer)
-4.  [Enhanced Layer]
+4.  [Enhanced Layer](#enhanced-layer)
 5.  [Flow Schema]
 
 ## Inleiding <a name="inleiding"></a>
@@ -36,5 +36,16 @@ Hieronder heb ik de usable layer geschetst:
 <img src="/img-readme/usable-layer.jpg" width=500>
 
 Hieronder heb ik de usable layer uitgewerkt:
+
+<img src="" width=500px>
+
+## Enhanced Layer <a name="enhanced-layer"></a>
+In de enhanced layer wilde ik me focussen op wat de enquete aangenaam maakt om de te gebruiken. Wederom komt hier het design principe progressive enhancement van pas. Ik heb in deze layer een optie toegevoegd om te zien hoe ver je bent in het formulier aan de hand van stappen, een optie om terug te gaan naar de vorige stap in het formulier en om naar de volgende stap in het formulier te gaan en een validatie waarbij de enquete inline aangeeft wanneer een student niet elke input field heeft ingevult.
+
+Hieronder heb ik de enhanced layer geschetst:
+
+<img src="/img-readme/enhanced-layer.jpg" width=500>
+
+Hieronder heb ik de enhanced layer uitgewerkt:
 
 <img src="" width=500px>
