@@ -54,4 +54,4 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 
 <img src="" width=500px>
 
-## Testen <a name="enhanced-layer"></a>
+# Testen <a name="testen"></a>
