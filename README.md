@@ -2,8 +2,8 @@
 
 # Inhoudsopgave
 1.  [Inleiding](#inleiding)
-2.  [Functional Layer](#functional-layer)
-3.  [De Drie Layers](#de-drie-layers)
+2.  [De Drie Layers](#de-drie-layers)
+3.  [Functional Layer](#functional-layer)
 4.  [Usable Layer](#usable-layer)
 5.  [Enhanced Layer](#enhanced-layer)
 6.  [Flow Schema]
