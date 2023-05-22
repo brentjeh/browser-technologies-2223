@@ -19,4 +19,4 @@ Ik kreeg de keuze tussen 6 user stories. Ik heb voor de eerste user story gekoze
 
 ## Functional Layer <a name="functional-layer"></a>
 
-<img height="400px" 
+<img src="/img-readme/functional-layer.jpg" width=600px>
