@@ -22,10 +22,10 @@ In de functional layer wilde ik me compleet focussen op de core functionaliteit 
 
 Hieronder heb ik de functional layer geschetst:
 
-<img src="/img-readme/functional-layer.jpg" width=600px>
+<img src="/img-readme/functional-layer.jpg" width=500>
 
 Hieronder heb ik de functional layer uitgewerkt:
 
-<img src="" width=600px>
+<img src="" width=500px>
 
 ## Usable Layer <a name="usable-layer"></a>
