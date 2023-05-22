@@ -3,9 +3,11 @@
 # Inhoudsopgave
 1.  [Inleiding](#inleiding)
 2.  [Functional Layer](#functional-layer)
-3.  [Usable Layer](#usable-layer)
-4.  [Enhanced Layer](#enhanced-layer)
-5.  [Flow Schema]
+3.  [De Drie Layers](#de-drie-layers)
+4.  [Usable Layer](#usable-layer)
+5.  [Enhanced Layer](#enhanced-layer)
+6.  [Flow Schema]
+7.  [Testen](#testen)
 
 ## Inleiding <a name="inleiding"></a>
 Dit vak bestaat uit twee opdrachten. Een daarvan is een introductieopdracht, en de ander, waarin ik in deze Read.me op in ga, is de eindopdracht. Voor deze opdracht ga ik een interactieve toepassing ontwerpen. Ik zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien, horen en/of voelen krijgen.
@@ -16,6 +18,8 @@ Ik kreeg de keuze tussen 6 user stories. Ik heb voor de eerste user story gekoze
 - Ik leer wat Progressive enhancement is en hoe ik dit kan toepassen.
 - Ik leer Browser Technologies te onderzoeken, testen en implementeren als enhancement.
 - Ik leer hoe ik Feature Detection doe en wat ik kan doen als een 'feature' niet werkt of wordt ondersteund.
+
+# De Drie Layers <a name="de-drie-layers"></a>
 
 ## Functional Layer <a name="functional-layer"></a>
 In de functional layer wilde ik me compleet focussen op de core functionaliteit van de user story. Iedereen moet de enquete in kunnen vullen, ongeacht van browser. Daarom moest het formulier werken zonder styling of JavaScript. Dit kan met HTML elementen zoals text-inputs, radio buttons, fieldsets en submit buttons. Browsers zoals Lynx kunnen alleen HTML lezen, dus ik wilde de enquete ook toegankelijk maken voor mensen die deze browser gebruiken (ik kom hier later in de readm.me op terug).
@@ -49,3 +53,5 @@ Hieronder heb ik de enhanced layer geschetst:
 Hieronder heb ik de enhanced layer uitgewerkt:
 
 <img src="" width=500px>
+
+## Testen <a name="enhanced-layer"></a>
