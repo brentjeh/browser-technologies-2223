@@ -2,7 +2,7 @@
 
 # Inhoudsopgave
 1.  [Inleiding](#inleiding)
-2.  [Functional Layer]
+2.  [Functional Layer](#functional-layer)
 3.  [Usable Layer]
 4.  [Enhanced Layer]
 5.  [Flow Schema]
@@ -16,3 +16,6 @@ Ik kreeg de keuze tussen 6 user stories. Ik heb voor de eerste user story gekoze
 - Ik leer wat Progressive enhancement is en hoe ik dit kan toepassen.
 - Ik leer Browser Technologies te onderzoeken, testen en implementeren als enhancement.
 - Ik leer hoe ik Feature Detection doe en wat ik kan doen als een 'feature' niet werkt of wordt ondersteund.
+
+## Functional Layer <a name="functional-layer"></a>
+
