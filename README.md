@@ -34,3 +34,7 @@ In de usable layer wilde ik me focussen op het toevoegen van usability. Hier kom
 Hieronder heb ik de usable layer geschetst:
 
 <img src="/img-readme/usable-layer.jpg" width=500>
+
+Hieronder heb ik de usable layer uitgewerkt:
+
+<img src="" width=500px>
