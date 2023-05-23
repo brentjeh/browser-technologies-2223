@@ -71,12 +71,12 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 ## Browsers waar ik mee getest heb <a name="browser-tests"></a>
 
 ### Desktop
-- Google Chrome
-- Firefox
-- Safari
-- Safari iOS
-- Samsung Internet
-- Lynx
+- Google Chrome (Desktop)
+- Firefox (Desktop)
+- Safari (Desktop)
+- Safari iOS (Mobile)
+- Samsung Internet (Mobile)
+- Lynx (Desktop)
 
 ### Google Chrome
 - [ ] Light en dark mode
@@ -86,11 +86,36 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - [ ] LocalStorage
 
 ### Firefox
+- [x] Light en dark mode
+- [x] Validatie
+- [x] Progress bar
+- [x] 'Volgende' en 'terug' knop
+- [ ] LocalStorage
 
 ### Safari
+- [ ] Light en dark mode
+- [ ] Validatie
+- [ ] Progress bar
+- [ ] 'Volgende' en 'terug' knop
+- [ ] LocalStorage
 
 ### Safari iOS
+- [ ] Light en dark mode
+- [ ] Validatie
+- [ ] Progress bar
+- [ ] 'Volgende' en 'terug' knop
+- [ ] LocalStorage
 
 ### Samsung Internet
+- [ ] Light en dark mode
+- [ ] Validatie
+- [ ] Progress bar
+- [ ] 'Volgende' en 'terug' knop
+- [ ] LocalStorage
 
 ### Lynx
+- [ ] Light en dark mode
+- [ ] Validatie
+- [ ] Progress bar
+- [ ] 'Volgende' en 'terug' knop
+- [ ] LocalStorage
