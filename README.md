@@ -79,6 +79,11 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - Lynx
 
 ### Google Chrome
+- [ ] Light en dark mode
+- [ ] Validatie
+- [ ] Progress bar
+- [ ] 'Volgende' en 'terug' knop
+- [ ] LocalStorage
 
 ### Firefox
 
