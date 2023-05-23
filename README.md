@@ -77,3 +77,15 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - 'Volgende' en 'terug' knop
   Volgende en terug knop werken door de vorige of volgende stap in het formulier te verbergen/weergeven.
 - LocalStorage
+
+### Google Chrome
+
+### Firefox
+
+### Safari
+
+### Safari iOS
+
+### Samsung Internet
+
+### Lynx
