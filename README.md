@@ -8,6 +8,7 @@
 5.  [Enhanced Layer](#enhanced-layer)
 6.  [Flow Schema]
 7.  [Testen](#testen)
+8.  [Browsers waar ik mee getest heb](#browser-tests)
 
 # Inleiding <a name="inleiding"></a>
 Dit vak bestaat uit twee opdrachten. Een daarvan is een introductieopdracht, en de ander, waarin ik in deze Read.me op in ga, is de eindopdracht. Voor deze opdracht ga ik een interactieve toepassing ontwerpen. Ik zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien, horen en/of voelen krijgen.
@@ -55,3 +56,5 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 <img src="" width=500px>
 
 # Testen <a name="testen"></a>
+
+## Browsers waar ik mee getest heb <a name="browser-tests"></a>
