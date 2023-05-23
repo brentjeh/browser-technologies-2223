@@ -69,7 +69,11 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 
 ## De features die ik heb onderzocht <a name="browser-tests"></a>
 - Light en dark mode
+  Light en dark mode werken aan de hand van variabelen. Zodra er op de 'dark-mode' knop gedrukt wordt, wordt een functie in JavaScript aangeroepen die een class toevoegt aan de     body. Deze class overschrijd de :root, waardoor de kleuren variabelen veranderen naar dat van de 'dark'mode' class. 
 - Validatie aan de hand van JavaScript
+  Validatie werkt door de error-messages te weergeven alleen wanneer een van de radio buttons niet geselecteerd zijn.
 - Progress bar aan de hand van JavaScript
+  Progress bar werkt door aan dezelfde functie als waarin de validatie plaatsvind een simpele 'progress.style.width = "278.4px";' regel staat, die elke keer wanneer de gebruiker     op de 'volgende' knop klikt geactiveerd wordt, en de progress bar hiermee langer wordt. De 'terug' knop geeft vanzelfsprekend hetzelfde effect, alleen dan andersom.
 - 'Volgende' en 'terug' knop
-- 
+  Volgende en terug knop werken door de vorige of volgende stap in het formulier te verbergen/weergeven.
+- LocalStorage
