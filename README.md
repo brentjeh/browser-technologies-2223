@@ -58,3 +58,18 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 # Testen <a name="testen"></a>
 
 ## Browsers waar ik mee getest heb <a name="browser-tests"></a>
+
+### Desktop
+- Google Chrome
+- Firefox
+- Safari
+- Safari iOS
+- Samsung Internet
+- Lynx
+
+## De features die ik heb onderzocht <a name="browser-tests"></a>
+- Light en dark mode
+- Validatie aan de hand van JavaScript
+- Progress bar aan de hand van JavaScript
+- 'Volgende' en 'terug' knop
+- 
