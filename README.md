@@ -59,14 +59,6 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 
 ## Browsers waar ik mee getest heb <a name="browser-tests"></a>
 
-### Desktop
-- Google Chrome
-- Firefox
-- Safari
-- Safari iOS
-- Samsung Internet
-- Lynx
-
 ## De features die ik heb onderzocht <a name="browser-tests"></a>
 - Light en dark mode
   Light en dark mode werken aan de hand van variabelen. Zodra er op de 'dark-mode' knop gedrukt wordt, wordt een functie in JavaScript aangeroepen die een class toevoegt aan de     body. Deze class overschrijd de :root, waardoor de kleuren variabelen veranderen naar dat van de 'dark'mode' class. 
@@ -77,6 +69,14 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - 'Volgende' en 'terug' knop
   Volgende en terug knop werken door de vorige of volgende stap in het formulier te verbergen/weergeven.
 - LocalStorage
+
+### Desktop
+- Google Chrome
+- Firefox
+- Safari
+- Safari iOS
+- Samsung Internet
+- Lynx
 
 ### Google Chrome
 
