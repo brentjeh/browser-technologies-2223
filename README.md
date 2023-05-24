@@ -113,7 +113,7 @@ Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Edg
 
 Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Safari iOS. Daarnaast loopt de progress-bar een beetje uit het scherm. Verder werkt de app zoals het hoort.
 
-<img src="/img-readme/safari-darkmode.jpg" width=250> <img src="/img-readme/safari-validatie.jpg" width=250>
+<img src="/img-readme/safari-darkmode.jpg" width=250> <img src="/img-readme/safari-validatie.jpg" width=250> <img src="/img-readme/safari-lightm.jpg" width=250>
 
 ### Samsung Internet
 - [ ] Light en dark mode
