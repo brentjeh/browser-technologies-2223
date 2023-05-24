@@ -97,7 +97,7 @@ Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet i
 - [x] Validatie
 - [x] Progress bar
 - [x] 'Volgende' en 'terug' knop
-- [ ] LocalStorage
+- [x] LocalStorage
 
 ### Edge
 - [x] Light en dark mode
