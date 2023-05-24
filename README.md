@@ -9,6 +9,7 @@
 6.  [Flow Schema]
 7.  [Testen](#testen)
 8.  [Browsers waar ik mee getest heb](#browser-tests)
+9.  [Conclusie](#conclusie)
 
 # Inleiding <a name="inleiding"></a>
 Dit vak bestaat uit twee opdrachten. Een daarvan is een introductieopdracht, en de ander, waarin ik in deze Read.me op in ga, is de eindopdracht. Voor deze opdracht ga ik een interactieve toepassing ontwerpen. Ik zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien, horen en/of voelen krijgen.
@@ -73,17 +74,19 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 ### Desktop
 - Google Chrome (Desktop)
 - Firefox (Desktop)
-- Safari (Desktop)
+- Edge (Desktop)
 - Safari iOS (Mobile)
 - Samsung Internet (Mobile)
 - Lynx (Desktop)
 
 ### Google Chrome
-- [ ] Light en dark mode
-- [ ] Validatie
-- [ ] Progress bar
-- [ ] 'Volgende' en 'terug' knop
+- [x] Light en dark mode
+- [x] Validatie
+- [x] Progress bar
+- [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
+
+Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet in Google Chrome. Ik ga er van uit dat dit niet persee een probleem is met localStorage, maar meer met de code zelf of hoe Google Chrome de code interpreteert.
 
 ### Firefox
 - [x] Light en dark mode
@@ -92,12 +95,14 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
 
-### Safari
-- [ ] Light en dark mode
-- [ ] Validatie
-- [ ] Progress bar
-- [ ] 'Volgende' en 'terug' knop
+### Edge
+- [x] Light en dark mode
+- [x] Validatie
+- [x] Progress bar
+- [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
+
+Zelf probleem als met Google Chrome. LocalStorage lijkt niet te werken met Edge.
 
 ### Safari iOS
 - [ ] Light en dark mode
@@ -119,3 +124,7 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - [ ] Progress bar
 - [ ] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
+
+Zoals verwacht werkt geen enkele feature in Lynx. Dit omdat Lynx alleen HTML kan lezen, waardoor de core-functionaliteit - het submitten van de form - wel werkt, maar alle features in de usable en enhanced layer niet werken.
+
+# Conclusie <a name="conclusie"></a>
