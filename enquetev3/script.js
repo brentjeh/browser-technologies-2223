@@ -8,10 +8,21 @@ const themeStylesheet = document.getElementById('theme-stylesheet');
 
 
 
-themeToggle.addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-
+// Functie om de huidige themamodus op te slaan in localStorage
+function saveThemeMode() {
   if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Functie om de opgeslagen themamodus te herstellen
+function restoreThemeMode() {
+  var savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.innerHTML = 'Light Mode <i class="fas fa-sun"></i>';
     themeStylesheet.innerHTML = `
       :root {
         /* Kleuren */
@@ -23,20 +34,17 @@ themeToggle.addEventListener('click', function() {
         --white: #252422;
       }
     `;
-    themeToggle.innerHTML = 'Light Mode <i class="fas fa-sun"></i>';
-    localStorage.setItem('theme', 'dark');
   } else {
-    themeStylesheet.innerHTML = '';
     themeToggle.innerHTML = 'Dark Mode <i class="fas fa-moon"></i>';
-    localStorage.setItem('theme', 'light');
+    themeStylesheet.innerHTML = '';
   }
-});
+}
 
-const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.innerHTML = 'Light Mode <i class="fas fa-sun"></i>';
-  }
+// Event listener voor de themamodus schakelaar
+themeToggle.addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  saveThemeMode();
+});
 
 
 
@@ -52,6 +60,44 @@ function genereerStappen() {
     stapElement.innerHTML = `<p>${stap}</p>`;
     progressContainer.appendChild(stapElement);
   });
+}
+
+
+
+function saveFormValues() {
+  var inputName = document.getElementById('input-name');
+  var inputStudentnummer = document.getElementById('input-studentnummer');
+  
+  localStorage.setItem('name', inputName.value);
+  localStorage.setItem('studentnummer', inputStudentnummer.value);
+}
+
+function restoreFormValues() {
+  var inputName = document.getElementById('input-name');
+  var inputStudentnummer = document.getElementById('input-studentnummer');
+  
+  inputName.value = localStorage.getItem('name');
+  inputStudentnummer.value = localStorage.getItem('studentnummer');
+}
+
+// Functie om de geselecteerde waarde op te slaan
+function saveSelectedValue() {
+  var selectedValue = document.querySelector('input[type="radio"]:checked').value;
+  localStorage.setItem('selectedValue', selectedValue);
+}
+
+// Functie om de opgeslagen waarde te herstellen en toe te passen
+function restoreSelectedValue() {
+  var selectedValue = localStorage.getItem('selectedValue');
+  if (selectedValue) {
+    document.querySelector('input[type="radio"][value="' + selectedValue + '"]').checked = true;
+  }
+}
+
+// Toevoegen van event listener aan de radioknoppen
+var radioButtons = document.querySelectorAll('input[type="radio"]');
+for (var i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener('click', saveSelectedValue);
 }
 
 
@@ -86,7 +132,7 @@ document.getElementById("next2").addEventListener("click", function(event) {
     if (selectedRadioButton1 && selectedRadioButton2 && selectedRadioButton3) {
       var wafs = document.getElementById("wafs");
       var cssttr = document.getElementById("cssttr");
-  
+      
       cssttr.style.display = "none";
       wafs.style.display = "grid";
       progress.style.width = "278.4px";
@@ -243,6 +289,16 @@ document.getElementById("back4").addEventListener("click", function(event) {
     bt.style.display = "grid";
     progress.style.width = "371.2px";
 }); 
+
+
+
+
+window.addEventListener('load', function() {
+  restoreThemeMode();
+  restoreFormValues();
+  restoreSelectedValue();
+});
+
 
 
 genereerStappen();

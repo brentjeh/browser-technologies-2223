@@ -69,7 +69,6 @@
     
     main {
         background-color: var(--main-color);
-        border-radius: 0 0 1em 1em;
     }
         main .main-container {
             padding: 48px;
@@ -441,7 +440,6 @@
     
     main {
         background-color: var(--main-color);
-        border-radius: 0 0 1em 1em;
     }
         main .main-container {
             padding: 48px;
@@ -759,13 +757,13 @@
         --error-color: #e74c3c;
     
         /* Font Sizes */
-        --h1: 4.2em;
-        --h2: 2.6em;
-        --h3: 1.8em;
-        --p: 1.3em;
+        --h1: 3em;
+        --h2: 2.2em;
+        --h3: 1.2em;
+        --p: 1.1em;
         --error: 1.1em;
-        --label: 1.2em;
-        --input-text: 1.2em;
+        --label: 1.1em;
+        --input-text: 1.1em;
     
         /* Line Heights */
         --line-height-plain-text: 1.6;
@@ -797,9 +795,7 @@
     }
     
     body {
-        /*
         overflow: hidden;
-        */
     }
 
 
@@ -817,7 +813,6 @@
     
     main {
         background-color: var(--main-color);
-        border-radius: 0 1em 1em 0;
     }
         main .main-container {
             padding: 48px;
