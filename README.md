@@ -86,7 +86,7 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 - [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
 
-Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet in Google Chrome. Ik ga er van uit dat dit niet persee een probleem is met localStorage, maar meer met de code zelf of hoe Google Chrome de code interpreteert.
+Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet in Google Chrome. Ik ga er van uit dat dit niet persee een probleem is met localStorage, maar meer met de code zelf of hoe Google Chrome de code interpreteert. Op caniuse.com staat namelijk wel dat Google Chrome localStorage zou moeten supporten. https://caniuse.com/?search=localstorage
 
 ### Firefox
 - [x] Light en dark mode
@@ -125,6 +125,7 @@ Zelf probleem als met Google Chrome. LocalStorage lijkt niet te werken met Edge.
 - [ ] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
 
-Zoals verwacht werkt geen enkele feature in Lynx. Dit omdat Lynx alleen HTML kan lezen, waardoor de core-functionaliteit - het submitten van de form - wel werkt, maar alle features in de usable en enhanced layer niet werken.
+Zoals verwacht werkt geen enkele feature in Lynx. Dit omdat Lynx alleen HTML kan lezen, waardoor de core-functionaliteit - het kunnen invullen en submitten van de form - wel werkt, maar alle features in de usable en enhanced layer niet werken.
 
 # Conclusie <a name="conclusie"></a>
+De core-functionaliteit - het het kunnen invullen en submitten van de form - werkt overal. Als je het territorium van de usable layer betreed, werkt de core-functionaliteit nog steeds. De usable layer maakt het alleen makkelijker voor de gebruiker om door het formulier te navigeren aan de hand van betere visuele hiërarchie, betere contrast, white space toevoegen, etc. Nog een stapje hoger bevindt zich de enhanced layer. Hierin wil ik het voornamelijk aangenamer maken voor de gebruiker om door het formulier te navigeren. Hier komen vooral de features kijken waarbij JavaScript nodig was, zoals de light en dark mode, validatie, een progress bar, een 'terug' en 'volgende' knop en localStorage.
