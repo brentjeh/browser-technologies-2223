@@ -102,14 +102,19 @@ Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet i
 - [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
 
-Zelf probleem als met Google Chrome. LocalStorage lijkt niet te werken met Edge.
+Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Edge.
 
 ### Safari iOS
-- [ ] Light en dark mode
-- [ ] Validatie
-- [ ] Progress bar
-- [ ] 'Volgende' en 'terug' knop
+- [x] Light en dark mode
+- [x] Validatie
+- [x] Progress bar
+- [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
+
+Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Safari iOS. Daarnaast loopt de progress-bar een beetje uit het scherm. Verder werkt de app zoals het hoort.
+
+<img src="/img-readme/safari-darkmode.jpg" width=250>
+<img src="/img-readme/safari-validatie.jpg" width=250>
 
 ### Samsung Internet
 - [ ] Light en dark mode
