@@ -1,0 +1,1117 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+@media (min-width:320px) /* Mobile */  {
+    :root { 
+        /* Colors */
+        --main-color: #eb5e28;
+        --secondary-color: #252422;
+        --darker-text: #252422;
+        --lighter-text: #403d39;
+        --grey: #f4f1eb;
+        --white: #fffcf2;
+        --error-color: #e74c3c;
+    
+        /* Font Sizes */
+        --h1: 3em;
+        --h2: 2.4em;
+        --h3: 1.8em;
+        --p: 1.2em;
+        --error: 1.1em;
+        --label: 1.2em;
+        --input-text: 1.2em;
+    
+        /* Line Heights */
+        --line-height-plain-text: 1.6;
+    
+        /* Font */
+        --general-font: 'Schibsted Grotesk', sans-serif;
+        --plain-font: 'Figtree', sans-serif;
+    
+        /* Border Radius Inputs/Buttons */
+        --border-radius: 0.4em;
+    }
+    
+    .dark-mode {
+        --main-color: #eb5e28;
+        --secondary-color: white;
+        --darker-text: #f4f1eb;
+        --lighter-text: white;
+        --grey: #403d39;
+        --white: #252422;
+    }
+    
+    
+    
+    
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        /*
+        overflow: hidden;
+        */
+    }
+
+
+
+    .container {
+        background-color: var(--white);
+    }
+    
+    
+    
+    
+    
+    main {
+        background-color: var(--main-color);
+    }
+        main .main-container {
+            padding: 48px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+            main #theme-toggle {
+                font-size: var(--input-text);
+                font-family: var(--general-font);
+                background-color: var(--white);
+                color: var(--secondary-color);
+                border-radius: var(--border-radius);
+                border: none;
+                cursor: pointer;
+                letter-spacing: -0.5px;
+                padding: 0.5em 0.8em;
+                margin-bottom: 1em;
+            }
+                main #theme-toggle:hover {
+                    background-color: var(--secondary-color);
+                    color: var(--white);
+                }
+                main #theme-toggle:active {
+                    background-color: var(--lighter-text);
+                }
+            main h1 {
+                color: var(--white);
+                font-size: var(--h1);
+                font-family: var(--plain-font);
+                letter-spacing: -1.5px;
+                margin-bottom: 0.3em;
+                line-height: 1;
+            }
+            main p {
+                color: white;
+                font-size: var(--label);
+                color: var(--white);
+                font-family: var(--general-font);
+                line-height: var(--line-height-plain-text);
+            }
+                main .stappen {
+                    width: 464px;
+                    position: relative;
+                    margin-top: 32px;
+                    box-sizing: border-box;
+                }
+                    main .stappen #stappen-titel {
+                        font-size: var(--h3);
+                        font-family: var(--plain-font);
+                        color: var(--white);
+                        letter-spacing: -1px;
+                        font-weight: 500;
+                        padding-bottom: 0.4em;
+                    }
+                    main .stappen #progress {
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        border-radius: var(--border-radius);
+                        transition: 0.5s ease-in-out;
+                        background-color: var(--darker-text);
+                        margin-top: 0.4em;
+                        width: 92.8px;
+                    }
+                    main .stappen #progress .stap {
+                        display: grid;
+                        align-items: center;
+                        text-align: center;
+                        height: 6em;
+                        font-size: 0.8em;
+                        width: 92.8px;
+                    }
+    
+    
+    
+    
+    
+    section {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: var(--darker-text);
+        padding: 3em 0;
+    }
+        section fieldset {
+            border: 0;
+            margin-bottom: 0.8em;
+        }
+        section h2 {
+            font-size: var(--h2);
+            font-family: var(--plain-font);
+            letter-spacing: -1.5px;
+        } 
+        section h3 {
+            font-size: var(--h3);
+            font-family: var(--general-font);
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: -1.5px;
+            margin-bottom: 0.5em;        
+        }
+        section .plain-text {
+            font-size: var(--p);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            letter-spacing: -1.5px;
+            border-radius: 0.2em;
+            line-height: 1.5;
+        }
+        section .error-message1, .error-message2, .error-message3 {
+            font-size: var(--error);
+            font-family: var(--general-font);
+            color: white;
+            letter-spacing: -1px;
+            display: none;
+            border-radius: 3px;
+            background-color: var(--error-color);
+        }
+        section label {
+            font-size: var(--p);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            letter-spacing: -1.5px;
+            line-height: 1.5;
+        }
+        section input {
+            margin-bottom: 0.5em;
+        }
+        section input[type="text"] {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            border: 0.1em solid var(--grey);
+            background-color: var(--grey);
+            border-radius: var(--border-radius);
+        }
+        section input[type="text"]:focus {
+            outline: none;
+        }
+        section input[type="date"] {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            border: 0.1em solid var(--grey);
+            background-color: var(--grey);
+            border-radius: var(--border-radius);
+        }
+            section input[type="date"]:focus {
+                outline: none;
+            }
+        section .back {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--white);
+            color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            border: 3px solid var(--secondary-color);
+            cursor: pointer;
+        }
+            section .back:hover {
+                background-color: var(--secondary-color);
+                color: var(--white);
+            }
+            section .back:active {
+                background-color: var(--lighter-text);
+            }
+        section .next {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+        }
+            section .next:hover {
+                background-color: var(--lighter-text);
+                color: var(--white);
+            }
+            section .next:active {
+                background-color: var(--secondary-color);
+            }
+        section input[type="radio"] {
+            display: none;
+        }
+        section input[type="radio"] + label {
+            display: grid;
+            place-content: center;
+            background-color: var(--grey);
+            cursor: pointer;
+            height: 2.5em;
+            border-radius: var(--border-radius);
+        }
+        section input[type="radio"]:checked + label {
+            background-color: var(--main-color);
+            color: var(--white);
+        }
+        section #submit-btn {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--main-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+        }
+            section #submit-btn:hover {
+                background-color: #fd9b74;
+            }
+            section #submit-btn:active {
+                background-color: var(--main-color);
+            }
+    
+    
+    
+    
+    
+                section #input-docent {
+                    display: grid;
+                    grid-gap: 0.2em;
+                    margin: 1em 0;
+                    grid-template-columns: 1fr 1fr;
+                }
+                section .moeilijkheidsgraad {
+                    display: grid;
+                    grid-gap: 0.2em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(5, 1fr);
+                }
+                section .duidelijkheid {
+                    display: grid;
+                    grid-gap: 0.2em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(5, 1fr);
+                }
+                section .lesstof {
+                    display: grid;
+                    grid-gap: 0.2em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(5, 1fr);
+                }
+                section .buttons {
+                    display: grid;
+                    grid-gap: 0.2em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(5, 1fr);
+                }
+    
+    
+    
+    
+    
+                section #naamstudentnummer {
+                    display: grid;
+                    grid-gap: 0.4em;
+                    width: 85vw;
+                }
+                #naamstudentnummer.naamstudentnummer-close {
+                    display: none;
+                }
+                section #cssttr {
+                    display: none;
+                    width: 85vw;
+                }
+                #cssttr.cssttr-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #wafs {
+                    display: none;
+                    width: 85vw;
+                }
+                #wafs.wafs-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #bt {
+                    display: none;
+                    width: 85vw;
+                }
+                #bt.bt-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #submit {
+                    display: none;
+                    width: 85vw;
+                }
+                #submit.submit-open {
+                    display: grid;
+                    place-content: center;
+                    grid-gap: 0.4em;
+                    width: 60%;
+                    margin: auto;
+                }
+    
+    br {
+        display: none;
+    }
+}
+
+@media (min-width:641px) /* Tablet */  {
+    :root { 
+        /* Colors */
+        --main-color: #eb5e28;
+        --secondary-color: #252422;
+        --darker-text: #252422;
+        --lighter-text: #403d39;
+        --grey: #f4f1eb;
+        --white: #fffcf2;
+        --error-color: #e74c3c;
+    
+        /* Font Sizes */
+        --h1: 3em;
+        --h2: 2.4em;
+        --h3: 1.8em;
+        --p: 1.2em;
+        --error: 1.1em;
+        --label: 1.2em;
+        --input-text: 1.2em;
+    
+        /* Line Heights */
+        --line-height-plain-text: 1.6;
+    
+        /* Font */
+        --general-font: 'Schibsted Grotesk', sans-serif;
+        --plain-font: 'Figtree', sans-serif;
+    
+        /* Border Radius Inputs/Buttons */
+        --border-radius: 0.4em;
+    }
+    
+    .dark-mode {
+        --main-color: #eb5e28;
+        --secondary-color: white;
+        --darker-text: #f4f1eb;
+        --lighter-text: white;
+        --grey: #403d39;
+        --white: #252422;
+    }
+    
+    
+    
+    
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        /*
+        overflow: hidden;
+        */
+    }
+
+
+
+    .container {
+        background-color: var(--white);
+    }
+    
+    
+    
+    
+    main {
+        background-color: var(--main-color);
+    }
+        main .main-container {
+            padding: 48px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+            main #theme-toggle {
+                font-size: var(--input-text);
+                font-family: var(--general-font);
+                background-color: var(--white);
+                color: var(--secondary-color);
+                border-radius: var(--border-radius);
+                border: none;
+                cursor: pointer;
+                letter-spacing: -0.5px;
+                padding: 0.5em 0.8em;
+                margin-bottom: 1em;
+            }
+                main #theme-toggle:hover {
+                    background-color: var(--secondary-color);
+                    color: var(--white);
+                }
+                main #theme-toggle:active {
+                    background-color: var(--lighter-text);
+                }
+            main h1 {
+                color: var(--white);
+                font-size: var(--h1);
+                font-family: var(--plain-font);
+                letter-spacing: -1.5px;
+                margin-bottom: 0.3em;
+                line-height: 1;
+            }
+            main p {
+                color: white;
+                font-size: var(--label);
+                color: var(--white);
+                font-family: var(--general-font);
+                line-height: var(--line-height-plain-text);
+            }
+                main .stappen {
+                    width: 464px;
+                    position: relative;
+                    margin-top: 32px;
+                }
+                    main .stappen #stappen-titel {
+                        font-size: var(--h3);
+                        font-family: var(--plain-font);
+                        color: var(--white);
+                        letter-spacing: -1px;
+                        font-weight: 500;
+                        padding-bottom: 0.4em;
+                    }
+                    main .stappen #progress {
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        border-radius: var(--border-radius);
+                        transition: 0.5s ease-in-out;
+                        background-color: var(--darker-text);
+                        margin-top: 0.4em;
+                        width: 92.8px;
+                    }
+                    main .stappen #progress .stap {
+                        display: grid;
+                        align-items: center;
+                        text-align: center;
+                        height: 6em;
+                        font-size: 0.8em;
+                        width: 92.8px;
+                    }
+
+    
+    
+    
+    
+    
+    section {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: var(--darker-text);
+        padding: 3em 0;
+    }
+        section fieldset {
+            border: 0;
+            margin-bottom: 0.8em;
+        }
+        section h2 {
+            font-size: var(--h2);
+            font-family: var(--plain-font);
+            letter-spacing: -1.5px;
+        } 
+        section h3 {
+            font-size: var(--h3);
+            font-family: var(--general-font);
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: -1.5px;
+            margin-bottom: 0.5em;        
+        }
+        section .plain-text {
+            font-size: var(--p);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            letter-spacing: -1.5px;
+            border-radius: 0.2em;
+            line-height: 1.5;
+        }
+        section .error-message1, .error-message2, .error-message3 {
+            font-size: var(--error);
+            font-family: var(--general-font);
+            color: white;
+            letter-spacing: -1px;
+            display: none;
+            border-radius: 3px;
+            background-color: var(--error-color);
+        }
+        section label {
+            font-size: var(--p);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            letter-spacing: -1.5px;
+            line-height: 1.5;
+        }
+        section input {
+            margin-bottom: 0.5em;
+        }
+        section input[type="text"] {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            border: 0.1em solid var(--grey);
+            background-color: var(--grey);
+            border-radius: var(--border-radius);
+        }
+        section input[type="text"]:focus {
+            outline: none;
+        }
+        section input[type="date"] {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            border: 0.1em solid var(--grey);
+            background-color: var(--grey);
+            border-radius: var(--border-radius);
+        }
+            section input[type="date"]:focus {
+                outline: none;
+            }
+        section .back {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--white);
+            color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            border: 3px solid var(--secondary-color);
+            cursor: pointer;
+        }
+            section .back:hover {
+                background-color: var(--secondary-color);
+                color: var(--white);
+            }
+            section .back:active {
+                background-color: var(--lighter-text);
+            }
+        section .next {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+        }
+            section .next:hover {
+                background-color: var(--lighter-text);
+                color: var(--white);
+            }
+            section .next:active {
+                background-color: var(--secondary-color);
+            }
+        section input[type="radio"] {
+            display: none;
+        }
+        section input[type="radio"] + label {
+            display: grid;
+            place-content: center;
+            background-color: var(--grey);
+            cursor: pointer;
+            height: 2.5em;
+            border-radius: var(--border-radius);
+        }
+        section input[type="radio"]:checked + label {
+            background-color: var(--main-color);
+            color: var(--white);
+        }
+        section #submit-btn {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--main-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+        }
+            section #submit-btn:hover {
+                background-color: #fd9b74;
+            }
+            section #submit-btn:active {
+                background-color: var(--main-color);
+            }
+    
+    
+    
+    
+    
+                section #input-docent {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: 1fr 1fr;
+                }
+                section .moeilijkheidsgraad {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                section .duidelijkheid {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                section .lesstof {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                section .buttons {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(2, 2fr);
+                }
+    
+    
+    
+    
+    
+                section #naamstudentnummer {
+                    display: grid;
+                    grid-gap: 0.4em;
+                    width: 90vw;
+                }
+                #naamstudentnummer.naamstudentnummer-close {
+                    display: none;
+                }
+                section #cssttr {
+                    display: none;
+                    width: 90vw;
+                }
+                #cssttr.cssttr-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #wafs {
+                    display: none;
+                    width: 90vw;
+                }
+                #wafs.wafs-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #bt {
+                    display: none;
+                    width: 90vw;
+                }
+                #bt.bt-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #submit {
+                    display: none;
+                    width: 90vw;
+                }
+                #submit.submit-open {
+                    display: grid;
+                    place-content: center;
+                    grid-gap: 0.4em;
+                    width: 60%;
+                    margin: auto;
+                }
+    
+    br {
+        display: none;
+    }
+}
+
+@media (min-width:1025px) /* Laptop/Computer */ {
+    :root { 
+        /* Colors */
+        --main-color: #eb5e28;
+        --secondary-color: #252422;
+        --darker-text: #252422;
+        --lighter-text: #403d39;
+        --grey: #f4f1eb;
+        --white: #fffcf2;
+        --error-color: #e74c3c;
+    
+        /* Font Sizes */
+        --h1: 3em;
+        --h2: 2.2em;
+        --h3: 1.2em;
+        --p: 1.1em;
+        --error: 1.1em;
+        --label: 1.1em;
+        --input-text: 1.1em;
+    
+        /* Line Heights */
+        --line-height-plain-text: 1.6;
+    
+        /* Font */
+        --general-font: 'Schibsted Grotesk', sans-serif;
+        --plain-font: 'Figtree', sans-serif;
+    
+        /* Border Radius Inputs/Buttons */
+        --border-radius: 0.4em;
+    }
+    
+    .dark-mode {
+        --main-color: #eb5e28;
+        --secondary-color: white;
+        --darker-text: #f4f1eb;
+        --lighter-text: white;
+        --grey: #403d39;
+        --white: #252422;
+    }
+    
+    
+    
+    
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        overflow: hidden;
+    }
+
+
+
+    .container {
+        background-color: var(--white);
+        display: grid;
+        grid-template-columns: 560px auto;
+        height: 100vh;
+    }
+    
+    
+    
+    
+    
+    main {
+        background-color: var(--main-color);
+    }
+        main .main-container {
+            padding: 48px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+            main #theme-toggle {
+                font-size: var(--input-text);
+                font-family: var(--general-font);
+                background-color: var(--white);
+                color: var(--secondary-color);
+                border-radius: var(--border-radius);
+                border: none;
+                cursor: pointer;
+                letter-spacing: -0.5px;
+                padding: 0.5em 0.8em;
+                margin-bottom: 1em;
+            }
+                main #theme-toggle:hover {
+                    background-color: var(--secondary-color);
+                    color: var(--white);
+                }
+                main #theme-toggle:active {
+                    background-color: var(--lighter-text);
+                }
+            main h1 {
+                color: var(--white);
+                font-size: var(--h1);
+                font-family: var(--plain-font);
+                letter-spacing: -1.5px;
+                margin-bottom: 0.3em;
+                line-height: 1;
+            }
+            main p {
+                color: white;
+                font-size: var(--label);
+                color: var(--white);
+                font-family: var(--general-font);
+                line-height: var(--line-height-plain-text);
+            }
+                main .stappen {
+                    width: 464px;
+                    position: relative;
+                    margin-top: 32px;
+                }
+                    main .stappen #stappen-titel {
+                        font-size: var(--h3);
+                        font-family: var(--plain-font);
+                        color: var(--white);
+                        letter-spacing: -1px;
+                        font-weight: 500;
+                        padding-bottom: 0.4em;
+                    }
+                    main .stappen #progress {
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        border-radius: var(--border-radius);
+                        transition: 0.5s ease-in-out;
+                        background-color: var(--darker-text);
+                        margin-top: 0.4em;
+                        width: 92.8px;
+                    }
+                    main .stappen #progress .stap {
+                        display: grid;
+                        align-items: center;
+                        text-align: center;
+                        height: 6em;
+                        font-size: 0.8em;
+                        width: 92.8px;
+                    }
+    
+    
+    
+    
+    
+    section {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: var(--darker-text);
+    }
+        section fieldset {
+            border: 0;
+            margin-bottom: 0.8em;
+        }
+        section h2 {
+            font-size: var(--h2);
+            font-family: var(--plain-font);
+            letter-spacing: -1.5px;
+        } 
+        section h3 {
+            font-size: var(--h3);
+            font-family: var(--general-font);
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: -1.5px;
+            margin-bottom: 0.5em;        
+        }
+        section .plain-text {
+            font-size: var(--p);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            letter-spacing: -1.5px;
+            border-radius: 0.2em;
+            line-height: 1.5;
+        }
+        section .error-message1, .error-message2, .error-message3 {
+            font-size: var(--error);
+            font-family: var(--general-font);
+            color: white;
+            letter-spacing: -1px;
+            display: none;
+            border-radius: 3px;
+            background-color: var(--error-color);
+        }
+        section label {
+            font-size: var(--p);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            letter-spacing: -1.5px;
+            line-height: 1.5;
+        }
+        section input {
+            margin-bottom: 0.5em;
+        }
+        section input[type="text"] {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            border: 0.1em solid var(--grey);
+            background-color: var(--grey);
+            border-radius: var(--border-radius);
+        }
+        section input[type="text"]:focus {
+            outline: none;
+        }
+        section input[type="date"] {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--general-font);
+            color: var(--lighter-text);
+            border: 0.1em solid var(--grey);
+            background-color: var(--grey);
+            border-radius: var(--border-radius);
+        }
+            section input[type="date"]:focus {
+                outline: none;
+            }
+        section .back {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--white);
+            color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            border: 3px solid var(--secondary-color);
+            cursor: pointer;
+        }
+            section .back:hover {
+                background-color: var(--secondary-color);
+                color: var(--white);
+            }
+            section .back:active {
+                background-color: var(--lighter-text);
+            }
+        section .next {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+        }
+            section .next:hover {
+                background-color: var(--lighter-text);
+                color: var(--white);
+            }
+            section .next:active {
+                background-color: var(--secondary-color);
+            }
+        section input[type="radio"] {
+            display: none;
+        }
+        section input[type="radio"] + label {
+            display: grid;
+            place-content: center;
+            background-color: var(--grey);
+            cursor: pointer;
+            height: 2.5em;
+            border-radius: var(--border-radius);
+        }
+        section input[type="radio"]:checked + label {
+            background-color: var(--main-color);
+            color: var(--white);
+        }
+        section #submit-btn {
+            padding: 1em;
+            font-size: var(--input-text);
+            font-family: var(--plain-font);
+            background-color: var(--main-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+        }
+            section #submit-btn:hover {
+                background-color: #fd9b74;
+            }
+            section #submit-btn:active {
+                background-color: var(--main-color);
+            }
+    
+    
+    
+    
+    
+                section #input-docent {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: 1fr 1fr;
+                }
+                section .moeilijkheidsgraad {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                section .duidelijkheid {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                section .lesstof {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                section .buttons {
+                    display: grid;
+                    grid-gap: 1em;
+                    margin: 1em 0;
+                    grid-template-columns: repeat(2, 2fr);
+                }
+    
+    
+    
+    
+    
+                section #naamstudentnummer {
+                    display: grid;
+                    grid-gap: 0.4em;
+                    width: 40vw;
+                }
+                #naamstudentnummer.naamstudentnummer-close {
+                    display: none;
+                }
+                section #cssttr {
+                    display: none;
+                    width: 40vw;
+                }
+                #cssttr.cssttr-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #wafs {
+                    display: none;
+                    width: 40vw;
+                }
+                #wafs.wafs-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #bt {
+                    display: none;
+                    width: 40vw;
+                }
+                #bt.bt-open {
+                    display: grid;
+                    grid-gap: 0.4em;
+                }
+                section #submit {
+                    display: none;
+                    width: 40vw;
+                }
+                #submit.submit-open {
+                    display: grid;
+                    place-content: center;
+                    grid-gap: 0.4em;
+                    width: 60%;
+                    margin: auto;
+                }
+    
+    br {
+        display: none;
+    }
+}    
