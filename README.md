@@ -6,7 +6,7 @@
 3.  [Functional Layer](#functional-layer)
 4.  [Usable Layer](#usable-layer)
 5.  [Enhanced Layer](#enhanced-layer)
-6.  [Flow Schema]
+6.  [Flow Schema](#flow-schema)
 7.  [Testen](#testen)
 8.  [Browsers waar ik mee getest heb](#browser-tests)
 9.  [Conclusie](#conclusie)
@@ -32,7 +32,7 @@ Hieronder heb ik de functional layer geschetst:
 
 Hieronder heb ik de functional layer uitgewerkt:
 
-<img src="" width=500px>
+<img src="/img-readme/functional-layer-uitgewerkt.png" width=500px>
 
 ## Usable Layer <a name="usable-layer"></a>
 In de usable layer wilde ik me focussen op het toevoegen van usability. Hier komt ook het design principe progressive enhancement van pas. De basis functie van de enquete is present, maar hoe meer er mogelijkheid voor is, hoe meer features er toegevoegd kunnen worden. In de usable layer heb ik vooral gelet op het toevoegen van white space tussen verschillende elementen, visual hierarchy om belangrijke elementen meer aandacht te geven (denk aan titels groter maken dan de labels), hover en active states van bijvoorbeeld radio buttons of knoppen, etc. Voornamelijk CSS.
@@ -54,7 +54,9 @@ Hieronder heb ik de enhanced layer geschetst:
 
 Hieronder heb ik de enhanced layer uitgewerkt:
 
-<img src="" width=500px>
+<img src="/img-readme/enhanced-layer-uitgewerkt.png" width=500px>
+
+# Flow Schema <a name="flow-schema"></a>
 
 # Testen <a name="testen"></a>
 
