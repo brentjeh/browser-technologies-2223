@@ -8,8 +8,9 @@
 5.  [Enhanced Layer](#enhanced-layer)
 6.  [Flow Schema](#flow-schema)
 7.  [Testen](#testen)
-8.  [Browsers waar ik mee getest heb](#browser-tests)
-9.  [Conclusie](#conclusie)
+8.  [Feature Tests](#feature-tests)
+10.  [Browsers waar ik mee getest heb](#browser-tests)
+11.  [Conclusie](#conclusie)
 
 # Inleiding <a name="inleiding"></a>
 Dit vak bestaat uit twee opdrachten. Een daarvan is een introductieopdracht, en de ander, waarin ik in deze Read.me op in ga, is de eindopdracht. Voor deze opdracht ga ik een interactieve toepassing ontwerpen. Ik zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien, horen en/of voelen krijgen.
@@ -62,7 +63,15 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 
 # Testen <a name="testen"></a>
 
-## De features die ik heb onderzocht <a name="browser-tests"></a>
+## Feature Tests <a name="feature-tests"></a>
+
+### Feature detection
+In web development verwijst 'feature detection' naar een techniek waarbij je controleert of een bepaalde functie of mogelijkheid beschikbaar is in de browser van een gebruiker voordat je erop vertrouwt of er gebruik van maakt. Het is een manier om te bepalen of een bepaalde web-API, methode of eigenschap wordt ondersteund door de browser die de website of webtoepassing gebruikt.
+
+Het belangrijkste doel van feature detection in web development is het leveren van fallback-opties of alternatieve code wanneer een bepaalde functie niet wordt ondersteund. Hierdoor kun je een betere gebruikerservaring bieden, ongeacht de mogelijkheden van de gebruikte browser.
+
+### De features die ik heb onderzocht <a name="feature-research"></a>
+
 - Light en dark mode
   Light en dark mode werken aan de hand van variabelen. Zodra er op de 'dark-mode' knop gedrukt wordt, wordt een functie in JavaScript aangeroepen die een class toevoegt aan de     body. Deze class overschrijd de :root, waardoor de kleuren variabelen veranderen naar dat van de 'dark'mode' class. 
 - Validatie aan de hand van JavaScript
@@ -125,6 +134,8 @@ Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Saf
 - [ ] Progress bar
 - [ ] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
+
+Ik heb Samsung Internet helaas niet kunnen testen. Daarom 
 
 ### Lynx
 - [ ] Light en dark mode
