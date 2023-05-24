@@ -58,6 +58,8 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 
 # Flow Schema <a name="flow-schema"></a>
 
+<img src="/img-readme/flow-schema/flow-schema.jpg" width=1000>
+
 # Testen <a name="testen"></a>
 
 ## De features die ik heb onderzocht <a name="browser-tests"></a>
