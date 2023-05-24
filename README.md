@@ -135,7 +135,17 @@ Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Saf
 - [ ] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
 
-Ik heb Samsung Internet helaas niet kunnen testen. Daarom 
+Ik heb Samsung Internet helaas niet kunnen testen. Daarom heb ik apart onderzoek gedaan naar welke functies die mijn features werkend maken ondersteund worden door Samsung Internet.
+- Light en dark mode
+  Dit werkt aan de hand van :root en een JavaScript code die de innerHTML van de :root veranderd. Beide :root en innerHTML werken.
+- Validatie aan de hand van JavaScript
+  Dit werkt aan de hand van JavaScript code die controleert of alle radio buttons geselecteerd zijn. Als alle radio buttons geselecteerd zijn, kan de gebruiker verder naar de       volgende stap door de 'volgende' knop te klikken. Zo niet, zal er een foutmelding worden weergegeven. De code is niet heel bijzonder en gebruikt de meest basic JavaScript, dus     alles werkt. De 'volgende' knop activeert een stuk code die dus valideert of de radio buttons geselecteerd zijn of niet. 
+- Progress bar aan de hand van JavaScript
+  De JavaScript code voor de progress bar is even simpel als dat voor de validatie. Als de gebruiker op de 'volgende' knop klikt, wordt er code geactiveert dat styling van de       progress bar aanpast, en dus de progress bar langer maakt.
+- 'Volgende' en 'terug' knop
+  Deze knoppen voeren code uit die ik hiervoor al uit heb gelegd.
+- LocalStorage
+  LocalStorage lijkt gewoon te werken volgens caniuse.com: https://caniuse.com/?search=localstorage. Alhoewel ik nog niet zeker weet of dit ook daadwerkelijk gaat werken op         Samsung Internet, aangezien het al eerder in andere browsers niet werkte.
 
 ### Lynx
 - [ ] Light en dark mode
