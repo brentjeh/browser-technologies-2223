@@ -43,7 +43,7 @@ Hieronder heb ik de usable layer geschetst:
 
 Hieronder heb ik de usable layer uitgewerkt:
 
-<img src="" width=500px>
+<img src="/img-readme/usable-layer-uitgewerkt.png" width=500>
 
 ## Enhanced Layer <a name="enhanced-layer"></a>
 In de enhanced layer wilde ik me focussen op wat de enquete aangenaam maakt om de te gebruiken. Wederom komt hier het design principe progressive enhancement van pas. Ik heb in deze layer een optie toegevoegd om te zien hoe ver je bent in het formulier aan de hand van stappen, een optie om terug te gaan naar de vorige stap in het formulier en om naar de volgende stap in het formulier te gaan en een validatie waarbij de enquete inline aangeeft wanneer een student niet elke input field heeft ingevult.
@@ -57,6 +57,8 @@ Hieronder heb ik de enhanced layer uitgewerkt:
 <img src="/img-readme/enhanced-layer-uitgewerkt.png" width=500px>
 
 # Flow Schema <a name="flow-schema"></a>
+
+<img src="/img-readme/flow-schema/flow-schema.jpg" width=1000>
 
 # Testen <a name="testen"></a>
 
@@ -95,7 +97,7 @@ Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet i
 - [x] Validatie
 - [x] Progress bar
 - [x] 'Volgende' en 'terug' knop
-- [ ] LocalStorage
+- [x] LocalStorage
 
 ### Edge
 - [x] Light en dark mode
