@@ -97,9 +97,9 @@ Het belangrijkste doel van feature detection in web development is het leveren v
 - [x] Validatie
 - [x] Progress bar
 - [x] 'Volgende' en 'terug' knop
-- [ ] LocalStorage
+- [x] LocalStorage
 
-Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet in Google Chrome. Het opslaan van de dark-mode doet hij wel. Ik ga er van uit dat dit niet persee een probleem is met localStorage, maar meer met de code zelf of hoe Google Chrome de code interpreteert. Op caniuse.com staat namelijk wel dat Google Chrome localStorage zou moeten supporten. https://caniuse.com/?search=localstorage
+Alles werkt op Google Chrome.
 
 ### Firefox
 - [x] Light en dark mode
@@ -108,23 +108,25 @@ Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet i
 - [x] 'Volgende' en 'terug' knop
 - [x] LocalStorage
 
+Alles werkt op Google Chrome.
+
 ### Edge
 - [x] Light en dark mode
 - [x] Validatie
 - [x] Progress bar
 - [x] 'Volgende' en 'terug' knop
-- [ ] LocalStorage
+- [x] LocalStorage
 
-Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Edge.
+Alles werkt op Google Chrome.
 
 ### Safari iOS
 - [x] Light en dark mode
 - [x] Validatie
 - [x] Progress bar
 - [x] 'Volgende' en 'terug' knop
-- [ ] LocalStorage
+- [x] LocalStorage
 
-Zelfde probleem als met Google Chrome. LocalStorage lijkt niet te werken met Safari iOS. Daarnaast loopt de progress-bar een beetje uit het scherm. Verder werkt de app zoals het hoort.
+De progress-bar loopt een beetje uit het scherm. Verder werkt de app zoals het hoort.
 
 <img src="/img-readme/safari-darkmode.jpg" width=250> <img src="/img-readme/safari-validatie.jpg" width=250> <img src="/img-readme/safari-lightmode.jpg" width=250>
 
