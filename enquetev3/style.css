@@ -33,7 +33,7 @@
         --border-radius: 0.4em;
     }
     
-    .dark-mode {
+    [data-theme="dark"] {
         --main-color: #eb5e28;
         --secondary-color: white;
         --darker-text: #f4f1eb;
@@ -314,11 +314,11 @@
                     margin: 1em 0;
                     grid-template-columns: repeat(5, 1fr);
                 }
-                section .buttons {
+                section .buttons1, .buttons2, .buttons3, .buttons4 {
                     display: grid;
-                    grid-gap: 0.2em;
+                    grid-gap: 1em;
                     margin: 1em 0;
-                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                 }
     
     
@@ -405,7 +405,7 @@
         --border-radius: 0.4em;
     }
     
-    .dark-mode {
+    [data-theme="dark"] {
         --main-color: #eb5e28;
         --secondary-color: white;
         --darker-text: #f4f1eb;
@@ -776,7 +776,7 @@
         --border-radius: 0.4em;
     }
     
-    .dark-mode {
+    [data-theme="dark"] {
         --main-color: #eb5e28;
         --secondary-color: white;
         --darker-text: #f4f1eb;

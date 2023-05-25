@@ -1,50 +1,7 @@
-var naamStudentnummer = document.getElementById("naamstudentnummer");
-var cssttr = document.getElementById("cssttr");
-
 const stappen = ['Jouw Gegevens', 'CSSttR', 'WAfS', 'Brow. Tech.', 'Submit'];
 
 const themeToggle = document.getElementById('theme-toggle');
 const themeStylesheet = document.getElementById('theme-stylesheet');
-
-
-
-// Functie om de huidige themamodus op te slaan in localStorage
-function saveThemeMode() {
-  if (document.body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
-}
-
-// Functie om de opgeslagen themamodus te herstellen
-function restoreThemeMode() {
-  var savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.innerHTML = 'Light Mode <i class="fas fa-sun"></i>';
-    themeStylesheet.innerHTML = `
-      :root {
-        /* Kleuren */
-        --main-color: #eb5e28;
-        --secondary-color: white;
-        --darker-text: #f4f1eb;
-        --lighter-text: white;
-        --grey: #403d39;
-        --white: #252422;
-      }
-    `;
-  } else {
-    themeToggle.innerHTML = 'Dark Mode <i class="fas fa-moon"></i>';
-    themeStylesheet.innerHTML = '';
-  }
-}
-
-// Event listener voor de themamodus schakelaar
-themeToggle.addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-  saveThemeMode();
-});
 
 
 
@@ -64,53 +21,129 @@ function genereerStappen() {
 
 
 
-function saveFormValues() {
-  var inputName = document.getElementById('input-name');
-  var inputStudentnummer = document.getElementById('input-studentnummer');
-  
-  localStorage.setItem('name', inputName.value);
-  localStorage.setItem('studentnummer', inputStudentnummer.value);
-}
+function saveFormAnswers() {
+  var nameInput = document.getElementById("input-name");
+  var studentnummerInput = document.getElementById("input-studentnummer");
 
-function restoreFormValues() {
-  var inputName = document.getElementById('input-name');
-  var inputStudentnummer = document.getElementById('input-studentnummer');
-  
-  inputName.value = localStorage.getItem('name');
-  inputStudentnummer.value = localStorage.getItem('studentnummer');
-}
-
-// Functie om de geselecteerde waarde op te slaan
-function saveSelectedValue() {
-  var selectedValue = document.querySelector('input[type="radio"]:checked').value;
-  localStorage.setItem('selectedValue', selectedValue);
-}
-
-// Functie om de opgeslagen waarde te herstellen en toe te passen
-function restoreSelectedValue() {
-  var selectedValue = localStorage.getItem('selectedValue');
-  if (selectedValue) {
-    document.querySelector('input[type="radio"][value="' + selectedValue + '"]').checked = true;
+  if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("name", nameInput.value);
+    localStorage.setItem("studentnummer", studentnummerInput.value);
   }
 }
 
-// Toevoegen van event listener aan de radioknoppen
-var radioButtons = document.querySelectorAll('input[type="radio"]');
-for (var i = 0; i < radioButtons.length; i++) {
-  radioButtons[i].addEventListener('click', saveSelectedValue);
+function loadFormAnswers() {
+  var nameInput = document.getElementById("input-name");
+  var studentnummerInput = document.getElementById("input-studentnummer");
+
+  if (typeof(Storage) !== "undefined") {
+    var savedName = localStorage.getItem("name");
+    var savedStudentnummer = localStorage.getItem("studentnummer");
+
+    if (savedName) {
+      nameInput.value = savedName;
+    }
+
+    if (savedStudentnummer) {
+      studentnummerInput.value = savedStudentnummer;
+    }
+  }
+};
+
+function saveDarkModePreference(isDarkMode) {
+  if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("darkMode", isDarkMode);
+  }
+}
+
+function loadDarkModePreference() {
+  if (typeof(Storage) !== "undefined") {
+    var isDarkMode = localStorage.getItem("darkMode");
+
+    if (isDarkMode === "true") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      var darkModeButton = document.getElementById("theme-toggle");
+      darkModeButton.innerHTML = 'Light Mode <i class="fas fa-sun">';
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+      var darkModeButton = document.getElementById("theme-toggle");
+      darkModeButton.innerHTML = 'Dark Mode <i class="fas fa-moon">';
+    }
+  }
 }
 
 
 
-document.getElementById("next1").addEventListener("click", function() {
+
+function addDarkModeButton() {
+  var mainContainer = document.querySelector(".main-container");
+  var firstDiv = mainContainer.querySelector("div:first-child");
+
+  var darkModeButton = document.createElement('button');
+  darkModeButton.setAttribute('id', 'theme-toggle');
+  darkModeButton.innerHTML = 'Dark Mode <i class="fas fa-moon">';
+
+  darkModeButton.addEventListener('click', function() {
+    event.preventDefault();
+    if (document.documentElement.hasAttribute("data-theme")) {
+      document.documentElement.removeAttribute("data-theme");
+      darkModeButton.innerHTML = 'Dark Mode <i class="fas fa-moon">';
+      saveDarkModePreference(false);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      darkModeButton.innerHTML = 'Light Mode <i class="fas fa-sun">';
+      saveDarkModePreference(true);
+    }
+  });
+
+  firstDiv.insertBefore(darkModeButton, firstDiv.firstChild);
+}
+
+function addNaamStudentnummerButton() {
+  var naamStudentnummer = document.getElementById("naamstudentnummer");
+
+  var naamStudentnummerButton = document.createElement('button');
+  naamStudentnummerButton.setAttribute('class', 'next'); 
+  naamStudentnummerButton.setAttribute('id', 'next1');
+  naamStudentnummerButton.textContent = 'Volgende';
+
+  naamStudentnummerButton.addEventListener('click', function() {
+    event.preventDefault();
+
     naamStudentnummer.style.display = "none";
     cssttr.style.display = "grid";
     progress.style.width = "185.6px";
+
+    saveFormAnswers();
   });
+
+  naamStudentnummer.appendChild(naamStudentnummerButton);
+}
+
+function addCssttrButtons() {
+  var buttons = document.querySelector(".buttons1");
+
+  var cssttrButtonBack = document.createElement('button');
+  cssttrButtonBack.setAttribute('class', 'back'); 
+  cssttrButtonBack.setAttribute('id', 'back1');
+  cssttrButtonBack.textContent = 'Terug';
+
+  var cssttrButtonNext = document.createElement('button');
+  cssttrButtonNext.setAttribute('class', 'next'); 
+  cssttrButtonNext.setAttribute('id', 'next2');
+  cssttrButtonNext.textContent = 'Volgende';
+
+  cssttrButtonBack.addEventListener('click', function() {
+    event.preventDefault();
   
+    var cssttr = document.getElementById("cssttr");
+    var naamStudentnummer = document.getElementById("naamstudentnummer");
 
+    cssttr.style.display = "none";
+    naamStudentnummer.style.display = "grid";
+    progress.style.width = "92.8px";
+  });
 
-document.getElementById("next2").addEventListener("click", function(event) {
+  cssttrButtonNext.addEventListener('click', function() {
     event.preventDefault();
   
     var moeilijkheidsgraadFieldset = document.getElementsByClassName("moeilijkheidsgraad")[0];
@@ -149,24 +182,37 @@ document.getElementById("next2").addEventListener("click", function(event) {
         errorMessage3.style.display = "block";
       }
     }
-});  
-  
+  });
 
+  buttons.appendChild(cssttrButtonBack);
+  buttons.appendChild(cssttrButtonNext);
+}
 
-document.getElementById("back1").addEventListener("click", function(event) {
+function addWafsButtons() {
+  var buttons = document.querySelector(".buttons2");
+
+  var wafsButtonBack = document.createElement('button');
+  wafsButtonBack.setAttribute('class', 'back'); 
+  wafsButtonBack.setAttribute('id', 'back2');
+  wafsButtonBack.textContent = 'Terug';
+
+  var wafsButtonNext = document.createElement('button');
+  wafsButtonNext.setAttribute('class', 'next'); 
+  wafsButtonNext.setAttribute('id', 'next3');
+  wafsButtonNext.textContent = 'Volgende';
+
+  wafsButtonBack.addEventListener('click', function() {
     event.preventDefault();
   
     var cssttr = document.getElementById("cssttr");
-    var naamStudentnummer = document.getElementById("naamstudentnummer");
+    var wafs = document.getElementById("wafs");
 
-    cssttr.style.display = "none";
-    naamStudentnummer.style.display = "grid";
-    progress.style.width = "92.8px";
-  });  
+    wafs.style.display = "none";
+    cssttr.style.display = "grid";
+    progress.style.width = "185.6px";
+  });
 
-
-
-document.getElementById("next3").addEventListener("click", function(event) {
+  wafsButtonNext.addEventListener('click', function() {
     event.preventDefault();
   
     var moeilijkheidsgraadFieldset = document.getElementsByClassName("moeilijkheidsgraad")[1];
@@ -188,7 +234,7 @@ document.getElementById("next3").addEventListener("click", function(event) {
     if (selectedRadioButton1 && selectedRadioButton2 && selectedRadioButton3) {
       var wafs = document.getElementById("wafs");
       var bt = document.getElementById("bt");
-  
+      
       wafs.style.display = "none";
       bt.style.display = "grid";
       progress.style.width = "371.2px";
@@ -205,24 +251,37 @@ document.getElementById("next3").addEventListener("click", function(event) {
         errorMessage3.style.display = "block";
       }
     }
-  });  
+  });
 
-  
+  buttons.appendChild(wafsButtonBack);
+  buttons.appendChild(wafsButtonNext);
+}
 
-document.getElementById("back2").addEventListener("click", function(event) {
+function addBtButtons() {
+  var buttons = document.querySelector(".buttons3");
+
+  var btButtonsBack = document.createElement('button');
+  btButtonsBack.setAttribute('class', 'back'); 
+  btButtonsBack.setAttribute('id', 'back3');
+  btButtonsBack.textContent = 'Terug';
+
+  var btButtonsNext = document.createElement('button');
+  btButtonsNext.setAttribute('class', 'next'); 
+  btButtonsNext.setAttribute('id', 'next4');
+  btButtonsNext.textContent = 'Volgende';
+
+  btButtonsBack.addEventListener('click', function() {
     event.preventDefault();
-  
+
+    var bt = document.getElementById("bt");
     var wafs = document.getElementById("wafs");
-    var cssttr = document.getElementById("cssttr");
 
-    wafs.style.display = "none";
-    cssttr.style.display = "grid";
-    progress.style.width = "185.6px";
-}); 
+    bt.style.display = "none";
+    wafs.style.display = "grid";
+    progress.style.width = "278.4px";
+  });
 
-
-
-document.getElementById("next4").addEventListener("click", function(event) {
+  btButtonsNext.addEventListener('click', function() {
     event.preventDefault();
   
     var moeilijkheidsgraadFieldset = document.getElementsByClassName("moeilijkheidsgraad")[2];
@@ -261,25 +320,21 @@ document.getElementById("next4").addEventListener("click", function(event) {
         errorMessage3.style.display = "block";
       }
     }
-});
-  
-  
+  });
 
+  buttons.appendChild(btButtonsBack);
+  buttons.appendChild(btButtonsNext);
+}
 
-document.getElementById("back3").addEventListener("click", function(event) {
-    event.preventDefault();
+function addSubmitButtons() {
+  var buttons = document.querySelector(".buttons4");
 
-    var bt = document.getElementById("bt");
-    var wafs = document.getElementById("wafs");
+  var submitButtonsBack = document.createElement('button');
+  submitButtonsBack.setAttribute('class', 'back'); 
+  submitButtonsBack.setAttribute('id', 'back4');
+  submitButtonsBack.textContent = 'Terug';
 
-    bt.style.display = "none";
-    wafs.style.display = "grid";
-    progress.style.width = "278.4px";
-}); 
-  
-  
-
-document.getElementById("back4").addEventListener("click", function(event) {
+  submitButtonsBack.addEventListener('click', function() {
     event.preventDefault();
 
     var submit = document.getElementById("submit");
@@ -288,17 +343,20 @@ document.getElementById("back4").addEventListener("click", function(event) {
     submit.style.display = "none";
     bt.style.display = "grid";
     progress.style.width = "371.2px";
-}); 
+  });
 
-
-
-
-window.addEventListener('load', function() {
-  restoreThemeMode();
-  restoreFormValues();
-  restoreSelectedValue();
-});
+  var submitButton = buttons.querySelector("button[type='submit']");
+  buttons.insertBefore(submitButtonsBack, submitButton);
+}
 
 
 
 genereerStappen();
+addNaamStudentnummerButton();
+addCssttrButtons();
+addWafsButtons();
+addBtButtons();
+addSubmitButtons();
+addDarkModeButton();
+loadFormAnswers();
+loadDarkModePreference();
