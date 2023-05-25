@@ -25,7 +25,7 @@ Ik kreeg de keuze tussen 6 user stories. Ik heb voor de eerste user story gekoze
 # De Drie Layers <a name="de-drie-layers"></a>
 
 ## Functional Layer <a name="functional-layer"></a>
-In de functional layer wilde ik me compleet focussen op de core functionaliteit van de user story. Iedereen moet de enquete in kunnen vullen, ongeacht van browser. Daarom moest het formulier werken zonder styling of JavaScript. Dit kan met HTML elementen zoals text-inputs, radio buttons, fieldsets en submit buttons. Browsers zoals Lynx kunnen alleen HTML lezen, dus ik wilde de enquete ook toegankelijk maken voor mensen die deze browser gebruiken (ik kom hier later in de readm.me op terug).
+In de functional layer wilde ik me compleet focussen op de core functionaliteit van de user story. Iedereen moet de enquete in kunnen vullen, ongeacht van browser. Daarom moest het formulier werken zonder styling of JavaScript. Dit kan met HTML elementen zoals text-inputs, radio buttons, fieldsets en submit buttons. Browsers zoals Lynx kunnen alleen HTML lezen, dus ik wilde de enquete ook toegankelijk maken voor mensen die deze browser gebruiken (ik kom hier later in de read.me op terug).
 
 Hieronder heb ik de functional layer geschetst:
 
