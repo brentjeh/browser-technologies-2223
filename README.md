@@ -99,7 +99,7 @@ Het belangrijkste doel van feature detection in web development is het leveren v
 - [x] 'Volgende' en 'terug' knop
 - [ ] LocalStorage
 
-Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet in Google Chrome. Ik ga er van uit dat dit niet persee een probleem is met localStorage, maar meer met de code zelf of hoe Google Chrome de code interpreteert. Op caniuse.com staat namelijk wel dat Google Chrome localStorage zou moeten supporten. https://caniuse.com/?search=localstorage
+Voor een of andere reden werkte de localStorage die wel in Firefox werkte niet in Google Chrome. Het opslaan van de dark-mode doet hij wel. Ik ga er van uit dat dit niet persee een probleem is met localStorage, maar meer met de code zelf of hoe Google Chrome de code interpreteert. Op caniuse.com staat namelijk wel dat Google Chrome localStorage zou moeten supporten. https://caniuse.com/?search=localstorage
 
 ### Firefox
 - [x] Light en dark mode
