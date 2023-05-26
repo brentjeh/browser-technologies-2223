@@ -10,7 +10,8 @@
 7.  [Testen](#testen)
 8.  [Feature Tests](#feature-tests)
 10.  [Browsers waar ik mee getest heb](#browser-tests)
-11.  [Conclusie](#conclusie)
+11.  [Screenreader Test](#screenreader-test)
+12.  [Conclusie](#conclusie)
 
 # Inleiding <a name="inleiding"></a>
 Dit vak bestaat uit twee opdrachten. Een daarvan is een introductieopdracht, en de ander, waarin ik in deze Read.me op in ga, is de eindopdracht. Voor deze opdracht ga ik een interactieve toepassing ontwerpen. Ik zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien, horen en/of voelen krijgen.
@@ -157,6 +158,8 @@ Ik heb Samsung Internet helaas niet kunnen testen. Daarom heb ik apart onderzoek
 - [ ] LocalStorage
 
 Zoals verwacht werkt geen enkele feature in Lynx. Dit omdat Lynx alleen HTML kan lezen, waardoor de core-functionaliteit - het kunnen invullen en submitten van de form - wel werkt, maar alle features in de usable en enhanced layer niet werken.
+
+## Screenreader Test <a name="screenreader-test"></a>
 
 # Conclusie <a name="conclusie"></a>
 De core-functionaliteit - het het kunnen invullen en submitten van de form - werkt overal. Als je het territorium van de usable layer betreed, werkt de core-functionaliteit nog steeds. De usable layer maakt het alleen makkelijker voor de gebruiker om door het formulier te navigeren aan de hand van betere visuele hiërarchie, betere contrast, white space toevoegen, etc. Nog een stapje hoger bevindt zich de enhanced layer. Hierin wil ik het voornamelijk aangenamer maken voor de gebruiker om door het formulier te navigeren. Hier komen vooral de features kijken waarbij JavaScript nodig was, zoals de light en dark mode, validatie, een progress bar, een 'terug' en 'volgende' knop en localStorage.
